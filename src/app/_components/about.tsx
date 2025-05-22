@@ -83,7 +83,7 @@ export function About() {
                                 className="bg-[#64d11b] hover:bg-[#58b917] text-white flex items-center justify-center w-fit gap-2 px-5 py-3 rounded-md transition-all shadow-md"
                             >
                                 <WhatsappLogo className="w-5 h-5 text-white" weight="fill" />
-                                Contato via Whatsapp
+                                Contato via Whatsapp e instagram 
                             </a>
 
                             {/* <a

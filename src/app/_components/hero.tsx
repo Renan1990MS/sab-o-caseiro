@@ -3,8 +3,20 @@ import Image from 'next/image'
 
 export function Hero() {
     return (
-        <section className="bg-gradient-to-r from-[#532205] to-[#c25311] text-white relative overflow-hidden">
-            <div className="container mx-auto py-16 px-4 relative">
+        <section className="relative text-white overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image 
+                    src="/mel02.jpg" 
+                    alt="Background Mel"
+                    fill
+                    priority
+                    className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#532205]/90 to-[#c25311]/70"></div>
+            </div>
+            
+            <div className="container mx-auto py-16 px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div className="space-y-6 max-w-xl" data-aos="fade-right" data-aos-duration="1000">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
@@ -28,7 +40,7 @@ export function Hero() {
                         </div>
 
                         <div className="mt-8" data-aos="fade-up" data-aos-delay="500">
-                            <div className="flex items-center gap-3 bg-black/20 p-3 rounded-lg backdrop-blur-sm w-fit">
+                            <div className="flex items-center gap-3 bg-black/30 p-3 rounded-lg backdrop-blur-sm w-fit">
                                 <span className="bg-amber-200 text-[#9c410b] px-3 py-1 rounded-md font-bold">7%</span>
                                 <p className="text-sm">
                                     de desconto na primeira compra com 10 pedras de sabão!
@@ -51,7 +63,7 @@ export function Hero() {
                     </div>
 
                     <div className="relative flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1000">
-                        <div className="relative h-[400px] w-full max-w-md">
+                        <div className="relative h-[400px] w-full max-w-md bg-white/10 p-4 rounded-xl backdrop-blur-sm">
                             <Image
                                 src="/logo.png"
                                 alt="Foto da mulher com o Sabão Caseiro"
@@ -66,8 +78,8 @@ export function Hero() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-200/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-200/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-200/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 z-10"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-200/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 z-10"></div>
         </section>
     )
 }
